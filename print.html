@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="pt-br">
+
+	<title>Print Service</title>
+	<meta charset="utf-8">
+	<link rel="icon" type="image/png" href="https://corpflex.com.br/wp-content/themes/pulso-engine-branding-2.0/assets/img/favicons/xfavicon-32x32.png.pagespeed.ic.b8S4ZB6g5A.webp" sizes="32x32">
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+
+	<h1>Print Service</h1>
+
+	<div id="cont">
+		<div id="fill">
+
+			<form>
+				Serial Number:<br>
+				<input type="text" id="serial" placeholder="Número de série do equipamento"><br><br>
+				Address: <br>
+				<input type="text" id="address" placeholder="Endereço do solicitante"><br><br>
+			</form>
+
+			<form>
+	            Description: <br>
+				<textarea type="text" id="desc" placeholder="Descreva o trâmite"></textarea><br><br>
+			</form>
+
+	        <form><!--Seleciona o tipo de trâmite-->
+				<label><input name="ticket_type" type="radio" id="open">Abertura</label>
+				<label><input name="ticket_type" type="radio" id="pendency">Pendência</label>
+				<label><input name="ticket_type" type="radio" id="update">Atualização</label>
+				<label><input name="ticket_type" type="radio" id="close">Fechamento</label>
+			</form>
+
+		</div>
+
+		<br/>
+
+		<div>
+			
+			<button onclick="auto_fill()">Gerar Log</button><br><br>
+	        <textarea rows="15" id="log" placeholder="A log com ADI e dados fornecidos será gerada neste campo"></textarea><br/>
+	        <button id="cop_tex" onclick="cop()">Copiar</button>
+
+		</div>
+
+	</div>
+
+	<nav>
+
+	<h2>Outros Formulários</h2>
+
+		<ul>
+			<li><a href="ADI_auto.html">Trâmites Padrão</a></li>
+			<li><a href="visita.html">Solicitação de Visita técnica</a></li>
+			<li><a href="print.html">Print Service</a></li>
+		</ul>
+
+	</nav>
+
+	<script type="text/javascript">
+
+        function auto_fill() {
+		
+        var detail = document.getElementById("desc").value;
+		
+		if(document.getElementById("open").checked){ //verficação de botões rádio
+			document.getElementById("log").value = "Prezado (a) Cliente,\n\nSegue abertura de seu ticket, conforme abaixo.\n\n" + detail + "\n\nPermanecemos a disposição para quaisquer esclarecimentos.";
+		} else if(document.getElementById("pendency").checked){
+			document.getElementById("log").value ="Prezado (a) Cliente,\n\nPor gentileza, solicitamos que revise a pendência abaixo.\n\n" + detail + "\n\nPermanecemos a disposição para quaisquer esclarecimentos.";
+		} else if(document.getElementById("update").checked){
+			document.getElementById("log").value = "Prezado (a) Cliente,\n\nSegue trâmite de atualização do seu atendimento.\n\n" + detail + "\n\nPermanecemos a disposição para quaisquer esclarecimentos.";
+		} else if(document.getElementById("close").checked){
+			document.getElementById("log").value = "Prezado (a) Cliente,\n\nSeu atendimento foi concluído, revise abaixo a solução aplicada.\n\n" + detail + "\n\nColoco-me à sua inteira disposição para quaisquer esclarecimentos.";
+		} else {
+			alert("Selecione uma opção");
+            return false;
+            //document.getElementById("log").value = '';
+        }
+			
+        }
+        
+        function cop(){ //seleciona e copia texto
+            document.getElementById("log").select();
+            document.execCommand('copy');
+            
+        }
+
+	</script>
+
+</body>
+</html> 

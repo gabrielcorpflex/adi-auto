@@ -1,0 +1,400 @@
+textarea::selection, input::selection, option:active{
+    background: #FFAF38;
+    color: #4C3513;
+    font-weight: bold;
+}
+
+body{
+	overflow-y: scroll;
+	/*border: thin solid;*/
+	position: absolute;
+	top: 0;
+	left: 0;
+    margin: 0;
+    padding: 0;
+}
+
+#logo{
+	height: 85px;
+	width: auto;
+	position: absolute;
+	left: 4px;
+	top: 5px;
+	border-radius: 15px;
+	display: block;
+}
+
+#pLogo{
+    width: 720px;
+    height: auto;
+    position: absolute;
+    left: 0px;
+    top: 8px;
+}
+
+header{
+	margin: 0;
+	padding: 1.5px;
+	text-align: center;	
+	background: #1C4681;
+	color: #FFF;
+    right: 0;
+    width: 100%;
+}
+
+h1{
+    position: relative;
+}
+
+.mainCont{
+	position: relative;
+	width: 75%;
+	display: block;
+	margin-top: 20px;
+	margin-left: 15%;
+	margin-right: 10%;
+	/*border: thin solid;*/
+}
+
+#cont {
+	width: 58%;
+	border: 5px solid #FFAF38;
+	-webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+		border-radius: 30px;
+	padding: 15px;
+	background: rgb(16, 51, 89);
+    /*background-image: linear-gradient(to bottom right , #2E5B82, #103359);*/
+
+}
+
+.fTable{
+	width: 100%;
+	display: block;
+	float: right;
+	border-collapse: separate;
+	overflow: hidden;
+
+}
+
+input[type="text"], #desc, fieldset{
+	width: 100%;
+	border: 2px solid #EB9E1A;
+	border-radius: 5px;
+	padding: 0;
+	margin: 0;
+}
+
+#select{
+    border: 2px solid #EB9E1A;
+	border-radius: 5px;
+	padding: 0;
+	margin: 0;
+}
+
+#log, #descrip{
+    width: 100%;
+    border: 2px solid #EB9E1A;
+	border-radius: 5px;
+	padding: 0;
+	margin: 0;
+}
+
+strong, label{
+	color: #FFF;
+
+}
+
+textarea{
+	color: #000;
+}
+
+legend{
+	margin-left: 6px;
+}
+
+#lMenu{
+	position: fixed;
+	width: 200px;
+	border-left: 5px solid #2E5B82;
+    border-top: 5px solid #2E5B82;
+    border-bottom: 5px solid #2E5B82;
+	background: #F1B553;
+	-webkit-border-top-left-radius: 20px;
+    -moz-border-top-left-radius: 20px;
+		border-top-left-radius: 20px;
+    -webkit-border-bottom-left-radius: 20px;
+    -moz-border-bottom-left-radius: 20px;
+		border-bottom-left-radius: 20px;
+	right: 0;
+	top: 103px;
+    display: inline-block;
+    padding: 0;
+}
+
+input[type="radio"]{
+	position: relative;
+    cursor: pointer;
+    opacity: 0;
+    margin-bottom: 10px;
+}
+
+.comb1{
+    background: #BBD1E6;
+}
+
+.comb2{
+    background: #5969A3;
+    color: #FFF;
+}
+
+.sec_choose_camp {
+    padding: 0 2%;
+}
+
+.selec{
+    position: relative;
+    width: 123px;
+    margin-bottom: 10px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.selec:hover, .opt:hover{
+    text-shadow: 1px 0 0 currentColor;
+}
+
+.chk_mark{
+    position: absolute;
+    top: 4px;
+    left: 2px;
+    width: 13px;
+    height: 13px;
+    background-color: #F1B553;
+    border-radius: 50%;
+    margin-left: 3px; 
+}
+
+.opt:hover input ~ .chk_mark{
+    background-color: #986925;
+}
+
+.opt input:checked ~ .chk_mark{
+    background-image: radial-gradient(circle, darkBlue, #F1B553, #C27628);
+    
+}
+
+/*.chk_mark:after{
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.opt input:checked ~ .chk_mark:after{
+    display: block;
+}
+
+.opt .chk_mark:after{
+    top: 3.7px;
+    left: 3.5px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #fff;
+}*/
+
+input, textarea, h1, button, form, nav, fieldset, table,h3{
+	font-family: Arial,sans-serif;
+}
+
+input, textarea, button, form, nav, fieldset, table{
+	font-size: 4mm;
+}
+
+#opt_ticket{
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 3%;
+	background: orchid;
+}
+
+nav{
+    margin-top: -15px;
+    border-radius: 15px;
+    
+}
+
+ul{
+	list-style-type: none;
+    top: 0;
+    width: 100%;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+h3{
+    text-align: center;
+    background: #2E5B82;
+    color: rgb(253,253,253);
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    overflow: hidden;
+    border: 0;
+    border-top-left-radius: 10px;
+}
+
+a{
+	text-decoration: none;
+	color: #0E4681;
+    font-weight: 600;
+    
+}
+
+.opt_menu{
+    padding-top: 2.5px;
+    width: 100%;
+    line-height: 35px;
+    text-align: center;
+}
+
+#last_menu{
+    border: 0;
+    border-bottom-left-radius: 15px;
+}
+
+.opt_menu:hover{
+    /*background: #98815F;*/
+    background-image: linear-gradient(to bottom, #986925, #F1B553);
+    color: rgb(255,255,255);
+}
+
+#menu_selec, #selec{
+    background: #986925;
+    color: rgb(255,255,255); 
+}
+
+textarea{
+	resize: vertical;
+}
+
+.btn{
+	display: block;
+	float: right;
+	border: 2px solid #EB9E1A;
+	border-radius: 5px;
+	background: #103359;
+    background-image: linear-gradient(to bottom right , #2E5B82, #103359);
+	color: #FFF;
+	font-weight: bold;
+	height: 30px;
+	width: 100px;
+	margin: 0;
+    cursor: pointer;
+}
+
+#lim_tex{
+    display: block;
+	float: right;
+	border: 2px solid #EB9E1A;
+	border-radius: 5px;
+	background: #EB9E1A;
+    background-image: linear-gradient(to bottom right , #EB9E1A, #103359);
+	color: #FFF;
+	font-weight: bold;
+	height: 30px;
+	width: 100px;
+	margin: 0;
+    cursor: pointer;
+}
+
+.btn:hover{
+	background: #EB9E1A;
+    background-image: linear-gradient(to bottom right , #C27628, #EB9E1A);
+	color: #FFF;
+}
+
+#lim_tex:hover{
+    background: #EB9E1A;
+    background-image: linear-gradient(to bottom right , #C27628, #EB9E1A);
+	color: #FFF;
+}
+
+.btn:active{
+    position: relative;
+    top: 1px;
+}
+
+#cop_tex{
+    margin-left: 10px;
+}
+
+#mand, #mand2{
+	color: red;
+	padding: 0;
+	margin: 0;
+}
+
+#address{
+	margin: 5px 0 5px 0;
+	border-radius: 5px;
+	border-color: black;
+	width: 100%;
+}
+
+.circle{
+	width: 10px;
+	height: 10px;
+	border: thin solid black;
+	border-radius: 10px
+}
+
+td{
+	/*border: thin solid salmon;*/
+}
+
+table {
+	width: 100%;
+    margin-right: 5px;
+	table-layout: fixed;
+}
+
+.rBtn{
+	display: inline-block;
+    position: relative;
+    margin-left: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.opt, .selec label, .selec input{
+    cursor: pointer;
+}
+
+#bPattern{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+
+
+.chk_choose_camp{
+    justify-content: center;
+}
+
+ label input[type="checkbox"]:checked + label{
+    text-shadow: 1px 0 0 currentColor;
+}
+
+/*.change_color_button{
+    position: absolute;
+    right: 0;
+    top: 220px;
+}
+
+.change_color_button button{
+    border-radius: 10px;
+}*/
+

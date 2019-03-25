@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="pt-br">
+
+	<title>Trâmites Padrão ADI</title>
+	<meta charset="utf-8">
+	<link rel="icon" type="image/png" href="https://corpflex.com.br/wp-content/themes/pulso-engine-branding-2.0/assets/img/favicons/xfavicon-32x32.png.pagespeed.ic.b8S4ZB6g5A.webp" sizes="32x32">
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+
+	<header>
+        <img id="pLogo" src="menu-shape-sm.png"/>
+		<img id="logo" src="logo-corpflex.png"/>
+		<h1>Trâmites Padrão ADI</h1>
+	</header>	
+    
+	<div class="mainCont">
+		<div id="cont">	
+			<form class="fTable">
+				<table>
+					<colgroup>
+						<col class="fWSize"/>
+					</colgroup>
+					<tr>
+						<td>
+				            <strong>Description<i id="mand"></i></strong><br/>
+							<textarea type="text" id="descrip" placeholder="Descreva o trâmite" autofocus></textarea>
+						</td>	
+					</tr>	
+						
+					<tr>
+						<td>
+							<!--Seleciona o tipo de trâmite-->
+							<fieldset id="options">
+								<legend><strong>Tipo de Chamado<i id="mand2"></i></strong></legend><br/>
+								<div class="rBtn"><label class="opt"><input name="ticket_type" type="radio" id="open">Abertura<span class="chk_mark"></span></label></div>
+								<div class="rBtn"><label class="opt"><input name="ticket_type" type="radio" id="pendency">Pendência<span class="chk_mark"></span></label></div>
+								<div class="rBtn"><label class="opt"><input name="ticket_type" type="radio" id="update">Atualização<span class="chk_mark"></span></label></div>
+								<div class="rBtn"><label class="opt"><input name="ticket_type" type="radio" id="close">Fechamento<span class="chk_mark"></span></label></div>
+							</fieldset>
+						</td>	
+					</tr>
+				</table>
+			</form>
+
+			<table class="bTable">
+				<colgroup>
+					<col class="fWSize"/>
+				</colgroup>
+				<tr>
+					<td>
+						<button class="btn" onclick="auto_fill()" id="logen">Gerar Log</button><br>
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+						<textarea rows="15" id="log" placeholder="A log com ADI e dados fornecidos será gerada neste campo"></textarea><br/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+                        <button class="btn" id="cop_tex" onclick="cop()">Copiar</button>
+                        <form>
+                            <button class="btn" id="lim_tex" action="ADI_auto.html">Limpar</button>
+                        </form>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<div id="lMenu">
+			<nav>
+				<ul>
+                    <li><h3>Formulários</h3></li>
+					<div id="menu_selec"><a href="ADI_auto.html" id="selec"><li id="first_menu" class="opt_menu">Trâmites Padrão</li></a></div>
+					<a href="visita.html"><li class="opt_menu">Visita técnica</li></a>
+					<a href="#"><li id="last_menu" class="opt_menu">Print Service</li></a>
+				</ul>
+			</nav>
+            <!--<div class="change_color_button">
+                <button type="button" onclick="cColor()">Change Color</button>
+            </div>-->
+		</div>
+	</div>
+
+	<!--<footer>
+		<img src="menu-shape-sm.png" id="bPattern">
+	</footer>-->	
+	<script type="text/javascript">
+
+		function auto_fill() {
+
+            var detail = document.getElementById("descrip").value;
+            var adi_e = detail + "\n\nPermanecemos a disposição para quaisquer esclarecimentos.";
+            var adi_c = detail + "\n\nColoco-me à sua inteira disposição para quaisquer esclarecimentos.";
+            var log_g = document.getElementById("log");
+            document.getElementById("descrip").style.border = "";
+            document.getElementById("options").style.border = "";
+			document.getElementById("mand").innerHTML = '';
+			document.getElementById("mand2").innerHTML = '';
+			
+			if (detail == false) {
+				alert ("Insira a descrição da LOG!!");
+				document.getElementById("descrip").style.border = "2px solid #C27628";
+				document.getElementById("mand").innerHTML = " * CAMPO OBRIGATÓRIO";
+			} else{
+				if(document.getElementById("open").checked){ //verficação de botões rádio
+					log_g.value = "Prezado (a) Cliente,\n\nSegue abertura de seu ticket, conforme abaixo.\n\n" + adi_e;
+                    console.log("opa");
+				} else if(document.getElementById("pendency").checked){
+					log_g.value ="Prezado (a) Cliente,\n\nPor gentileza, solicitamos que revise a pendência abaixo.\n\n" + adi_e;
+				} else if(document.getElementById("update").checked){
+					log_g.value = "Prezado (a) Cliente,\n\nSegue trâmite de atualização do seu atendimento.\n\n" + adi_e;
+				} else if(document.getElementById("close").checked){
+					log_g.value = "Prezado (a) Cliente,\n\nSeu atendimento foi concluído, revise abaixo a solução aplicada.\n\n" + adi_c;
+				} else {
+					alert("Selecione um tipo de chamado!!");
+	                document.getElementById("options").style.border = "2px solid #C27628";
+					document.getElementById("mand2").innerHTML = " * CAMPO OBRIGATÓRIO";
+	                //return false;
+	            }
+			}
+        }
+        
+        function cop(){ //seleciona e copia texto
+            document.getElementById("log").select();
+            document.execCommand('copy');
+            
+        }
+        
+        /*function cColor(){
+            var col = document.getElementById("cont").style.backgroundColor;
+            
+            if (col == "rgb(95, 73, 69)"){
+                document.getElementById("cont").style.backgroundColor = "rgb(16, 51, 89)";
+            } else {
+                document.getElementById("cont").style.backgroundColor = "rgb(95, 73, 69)";
+            }
+        }*/
+		
+	</script>
+
+</body>
+</html>
