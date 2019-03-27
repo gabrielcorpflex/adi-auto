@@ -20,118 +20,92 @@
 	
     <div class="mainCont">
         <div id="cont">
-            <form class="fTable">
-                <table>
-                    <colgroup>
-                        <col class="fWSize"/>
-                    </colgroup>
-                    <tr>
-                        <td>
-                            <strong>Description</strong>
-                            <textarea type="text" id="desc" placeholder="Descreva o trâmite" autofocus></textarea><br/><br/>
-                        </td>
-                    </tr>
-                    
-                    <tr>
-                        <td>
-                            
-                                <strong>Serial Number</strong>
-                                <input type="text" id="serial" placeholder="Número de série do equipamento"><br/>
-                            
-                        </td>   
-                    </tr>
-                    <tr>
-                        <td>
-                            <fieldset>
-                                <legend><strong>Address</strong></legend>
-                                <select id="address">
-                                    <option selected="selected">Selecione o endereço do solicitante</option>
-                                    <option class="comb1">ARACAJU RUA LAGARTO, 1176 - CENTRO - CEP - 49010 -</option>
-                                    <option class="comb2">BELÉM RUA MUNDURUCUS, 3100 - EDIF. METROPOLITAN</option>
-                                    <option class="comb2">BELÉM TV. DR. MORAES, Nº 121 - BAIRRO NAZARÉ - BE</option>
-                                    <option class="comb1">BELO HORIZONTE RUA OLYMPIO TEIXEIRA GUIMARÃES, Nº</option>
-                                    <option class="comb2">BOA VISTA AV. CAPITÃO ENE GARCES 130 - CENTRO</option>
-                                    <option class="comb1">CAMPO GRANDE RUA TAPAJÓS, 660</option>
-                                    <option class="comb2">CUIABÁ RUA BARÃO DE MELGAÇO - Nº 3.209, CENTRO SU</option>
-                                    <option class="comb1">CURITIBA AVENIDA ANITA GARIBALDI, 523</option>
-                                    <option class="comb1">CURITIBA RUA IMACULADA CONCEIÇÃO, 1430 - PRADO VE</option>
-                                    <option class="comb2">DF - SCS QD 02 BLOCO E PROJECAO 21, 10º ANDAR</option>
-                                    <option class="comb1">FLORIANÓPOLIS DESEMBARGADOR GIL COSTA, 605</option>
-                                    <option class="comb2">FORTALEZA AV DOMINGOS OLIMPIO 2290 - BAIRRO OTÁVI</option>
-                                    <option class="comb1">GOIANIA RODOVIA BR 153 - KM 6 - BLOCO 03 - 1° PIS</option>
-                                    <option class="comb2">JOÃO PESSOA AV. VISC. DE PELOTAS, 329-379 - CENTRO</option>
-                                    <option class="comb1">MACAPÁ AV. DUQUE DE CAXIAS, 106 - CENTRO, CEP 600</option>
-                                    <option class="comb2">MACEIÓ RUA ARSÊNIO FORTES S/N - FAROL - MACEIÓ A</option>
-                                    <option class="comb1">MANAUS AV. GETÚLIO VARGAS, 950 - CENTRO, CEP 6902</option>
-                                    <option class="comb2">NATAL - RUA MORAIS NAVARRO, 2030, TÉRREO - LAGOA N</option>
-                                    <option class="comb1">PALMAS QD. 501 SUL - AV-NS01, CONJ. 2 LOTE 15 - P</option>
-                                    <option class="comb2">PORTO ALEGRE RUA JOAQUIM OLIVEIRA, N186, ANCHIETA</option>
-                                    <option class="comb2">PORTO ALEGRE AVENIDA CORONEL APARÍCIO BORGES, 2531</option>
-                                    <option class="comb2">PORTO ALEGRE RUA BALTAZAR DE OLIVEIRA GARCIA, 1245</option>
-                                    <option class="comb1">PORTO VELHO RUA DOM PEDRO II, 1213 - CENTRO</option>
-                                    <option class="comb2">RECIFE RUA IZABEL DE SOUZA - S/N - IMBIRIBEIRA -</option>
-                                    <option class="comb2">RECIFE RUA PADRE CARAPUCEIRO, 733 - EDIF. EMPRESA</option>
-                                    <option class="comb1">RIO BRANCO AV. BRASIL N° 381 BAIRRO CENTRO RIO BR</option>
-                                    <option class="comb2">RIO DE JANEIRO RUA HANNIBAL PORTO, 450 TÉRREO -</option>
-                                    <option class="comb2">RIO DE JANEIRO AV. JOÃO CABRAL DE MELLO NETO, 850</option>
-                                    <option class="comb1">SALVADOR RUA SILVEIRA MARTINS, 355, BAIRRO CABULA</option>
-                                    <option class="comb2">SÃO LUIS AV ALEXANDRE DE MOURA, 86 - CENTRO SÃO L</option>
-                                    <option class="comb1">SÃO PAULO RUA WENNER SIEMENS 111 EDIFICIO 19</option>
-                                    <option class="comb1">SÃO PAULO VIA ANHANGUERA, 1500 - KM 15 DA RODOVIA</option>
-                                    <option class="comb2">TERESINA AV FREI SERAFIM 1782- 1º ANDAR - CENTRO</option>
-                                    <option class="comb1">VITORIA RUA DO ROSÁRIO, Nº 150, CENTRO, CEP: 29.0</option>
-                                </select><br/>
-                            </fieldset>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <!--Seleciona o tipo de trâmite-->
-							<fieldset id="options">
-                                <legend><strong>Tipo de Chamado<i id="mand2"></i></strong></legend><br/>
-                                <div class="chk_choose_camp">
-                                    <div class="rBtn"><label class="opt"><input name="ticket_type" type="radio" id="open">Abertura<span class="chk_mark"></span></label></div>
-                                    <div class="rBtn"><label class="opt"><input name="ticket_type" type="radio" id="pendency">Pendência<span class="chk_mark"></span></label></div>
-                                    <div class="rBtn"><label class="opt"><input name="ticket_type" type="radio" id="update">Atualização<span class="chk_mark"></span></label></div>
-                                    <div class="rBtn"><label class="opt"><input name="ticket_type" type="radio" id="close">Fechamento<span class="chk_mark"></span></label></div>
-                                </div>
-                                
-                                <hr/>
-                                
-                                <div class="sec_choose_camp">
-                                    <div class="selec"><label><input type="checkbox" name="option" id="format"/>Formatação</label></div>
-                                    <div class="selec"><label><input type="checkbox" name="option" id="off13">Office 2013</label></div>
-                                    <div class="selec"><label><input type="checkbox" name="option" id="off16">Office 2016</label></div>
-                                </div>
-                            </fieldset>
-                        </td>
-                    </tr>
-                </table>
-            </form>
-            <table class="bTable">
-                <colgroup>
-                    <col class="fWSize"/>
-                </colgroup>
-                <tr>
-                    <td>
+            <form class="col-field-fill">
+                <div class="row-field">
+                    <strong>Description</strong>
+                    <textarea type="text" id="desc" placeholder="Descreva o trâmite" autofocus></textarea>
+                </div>
+                
+                <div class="col-field-fill">
+                        <strong>Serial Number</strong>
+                        <input type="text" id="serial" placeholder="Número de série do equipamento"><br/>
+                </div>
+                
+                <div class="class-field-fill">
+                    <fieldset>
+                        <legend><strong>Address</strong></legend>
+                        <select id="address">
+                            <option selected="selected">Selecione o endereço do solicitante</option>
+                            <option class="comb1">ARACAJU RUA LAGARTO, 1176 - CENTRO - CEP - 49010</option>
+                            <option class="comb2">BELÉM RUA MUNDURUCUS, 3100 - EDIF. METROPOLITAN</option>
+                            <option class="comb2">BELÉM TV. DR. MORAES, Nº 121 - BAIRRO NAZARÉ - BE</option>
+                            <option class="comb1">BELO HORIZONTE RUA OLYMPIO TEIXEIRA GUIMARÃES, Nº</option>
+                            <option class="comb2">BOA VISTA AV. CAPITÃO ENE GARCES 130 - CENTRO</option>
+                            <option class="comb1">CAMPO GRANDE RUA TAPAJÓS, 660</option>
+                            <option class="comb2">CUIABÁ RUA BARÃO DE MELGAÇO - Nº 3.209, CENTRO SU</option>
+                            <option class="comb1">CURITIBA AVENIDA ANITA GARIBALDI, 523</option>
+                            <option class="comb1">CURITIBA RUA IMACULADA CONCEIÇÃO, 1430 - PRADO VE</option>
+                            <option class="comb2">DF - SCS QD 02 BLOCO E PROJECAO 21, 10º ANDAR</option>
+                            <option class="comb1">FLORIANÓPOLIS DESEMBARGADOR GIL COSTA, 605</option>
+                            <option class="comb2">FORTALEZA AV DOMINGOS OLIMPIO 2290 - BAIRRO OTÁVI</option>
+                            <option class="comb1">GOIANIA RODOVIA BR 153 - KM 6 - BLOCO 03 - 1° PIS</option>
+                            <option class="comb2">JOÃO PESSOA AV. VISC. DE PELOTAS, 329-379 - CENTRO</option>
+                            <option class="comb1">MACAPÁ AV. DUQUE DE CAXIAS, 106 - CENTRO, CEP 600</option>
+                            <option class="comb2">MACEIÓ RUA ARSÊNIO FORTES S/N - FAROL - MACEIÓ A</option>
+                            <option class="comb1">MANAUS AV. GETÚLIO VARGAS, 950 - CENTRO, CEP 6902</option>
+                            <option class="comb2">NATAL - RUA MORAIS NAVARRO, 2030, TÉRREO - LAGOA N</option>
+                            <option class="comb1">PALMAS QD. 501 SUL - AV-NS01, CONJ. 2 LOTE 15 - P</option>
+                            <option class="comb2">PORTO ALEGRE RUA JOAQUIM OLIVEIRA, N186, ANCHIETA</option>
+                            <option class="comb2">PORTO ALEGRE AVENIDA CORONEL APARÍCIO BORGES, 2531</option>
+                            <option class="comb2">PORTO ALEGRE RUA BALTAZAR DE OLIVEIRA GARCIA, 1245</option>
+                            <option class="comb1">PORTO VELHO RUA DOM PEDRO II, 1213 - CENTRO</option>
+                            <option class="comb2">RECIFE RUA IZABEL DE SOUZA - S/N - IMBIRIBEIRA</option>
+                            <option class="comb2">RECIFE RUA PADRE CARAPUCEIRO, 733 - EDIF. EMPRESA</option>
+                            <option class="comb1">RIO BRANCO AV. BRASIL N° 381 BAIRRO CENTRO RIO BR</option>
+                            <option class="comb2">RIO DE JANEIRO RUA HANNIBAL PORTO, 450 TÉRREO</option>
+                            <option class="comb2">RIO DE JANEIRO AV. JOÃO CABRAL DE MELLO NETO, 850</option>
+                            <option class="comb1">SALVADOR RUA SILVEIRA MARTINS, 355, BAIRRO CABULA</option>
+                            <option class="comb2">SÃO LUIS AV ALEXANDRE DE MOURA, 86 - CENTRO SÃO L</option>
+                            <option class="comb1">SÃO PAULO RUA WENNER SIEMENS 111 EDIFICIO 19</option>
+                            <option class="comb1">SÃO PAULO VIA ANHANGUERA, 1500 - KM 15 DA RODOVIA</option>
+                            <option class="comb2">TERESINA AV FREI SERAFIM 1782- 1º ANDAR - CENTRO</option>
+                            <option class="comb1">VITORIA RUA DO ROSÁRIO, Nº 150, CENTRO, CEP: 29.0</option>
+                        </select><br/>
+                    </fieldset>
+                
+                    <div class="row-field-fill">
+                        <!--Seleciona o tipo de trâmite-->
+                        <fieldset id="options">
+                            <legend><strong>Tipo de Chamado<i id="mand2"></i></strong></legend><br/>
+                            <div class="chk_choose_camp">
+                                <div class="rBtn"><label class="opt"><input name="ticket_type" type="radio" id="open">Abertura<span class="chk_mark"></span></label></div>
+                                <div class="rBtn"><label class="opt"><input name="ticket_type" type="radio" id="pendency">Pendência<span class="chk_mark"></span></label></div>
+                                <div class="rBtn"><label class="opt"><input name="ticket_type" type="radio" id="update">Atualização<span class="chk_mark"></span></label></div>
+                                <div class="rBtn"><label class="opt"><input name="ticket_type" type="radio" id="close">Fechamento<span class="chk_mark"></span></label></div>
+                            </div>
 
-                        <button class="btn" onclick="auto_fill()">Gerar Log</button><br/><br/>
-                    </td>
-                </tr>
-                <tr>
-                    <td>     
-                        <textarea rows="15" id="log" placeholder="A log com ADI e dados fornecidos será gerada neste campo"></textarea><br/>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <button class="btn" id="cop_tex" onclick="cop()">Copiar</button>
-                        <form>
-                            <button class="btn" id="lim_tex" action="ADI_auto.html">Limpar</button>
-                        </form>
-                    </td>
-                </tr>
-            </table>
+                            <hr/>
+
+                            <div class="sec_choose_camp">
+                                <div class="selec"><label><input type="checkbox" name="option" id="format"/>Formatação</label></div>
+                                <div class="selec"><label><input type="checkbox" name="option" id="off13">Office 2013</label></div>
+                                <div class="selec"><label><input type="checkbox" name="option" id="off16">Office 2016</label></div>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+            </form>
+            <div class="col-field-gen" id="gen-field">
+
+                <button class="btn" id="gen-btn" onclick="auto_fill()">Gerar Log</button><br/><br/>
+
+                <textarea rows="15" id="log" placeholder="A log com ADI e dados fornecidos será gerada neste campo"></textarea><br/>
+
+                <button class="btn" id="cop-btn" onclick="cop()">Copiar</button>
+                <form>
+                    <button class="btn" id="lim_tex" action="ADI_auto.html">Limpar</button>
+                </form>
+            </div>
         </div>
 
         <div id="lMenu">
@@ -157,7 +131,7 @@
             var adi_c = "\n\nColoco-me à sua inteira disposição para quaisquer esclarecimentos.";
 			var log_g = document.getElementById("log");
             
-			var formating = "\n\nCaso seja necessária formatação o técnico deverá ter em mãos as seguintes ferramentas:\n\n- Windows 7 professional (usar ISO da FTP Nokia e Service Pack 1);\n * Caso o equpamento tenha menos que 4GB de memória ram, utilizar sistema operacional 32 bits. Nos demais casos, utilizar sistema operacional 64 bits. \n\n- Técnico deverá levar modem 3G/4G ou celular com roteamento USB e dados moveis ativos para ativação do Windows (utilizar licença do equipamento).\n\nSoftwares a serem instalados:\n\n\t- Winrar;\n\t- Antivirus;\n\t- Navegadores;\n\t- Adobe Reader;\n\t- Certificados Smart;\n\t- Drivers para configuração de impressoras;\n\t- TeamViewer 9 (Caso possua uma versão diferente instalada, desinstalar);\n\t- ;\n\t- ;\n\t- ;\n\t- ;\n\nObs.: Estes softwares DEVEM ser obtidos pelo FTP NOKIA.";
+			var formating = "\n\nCaso seja necessária formatação o técnico deverá ter em mãos as seguintes ferramentas:\n\n- Windows 7 professional (usar ISO da FTP Nokia e Service Pack 1);\n * Caso o equipamento tenha menos que 4GB de memória ram, utilizar sistema operacional 32 bits. Nos demais casos, utilizar sistema operacional 64 bits. \n\n- Técnico deverá levar modem 3G/4G ou celular com roteamento USB e dados moveis ativos para ativação do Windows (utilizar licença do equipamento).\n\nSoftwares a serem instalados:\n\n- Winrar;\n- Antivirus;\n- Navegadores;\n- Adobe Reader;\n- Certificados Smart;\n- Drivers para configuração de impressoras;\n- TeamViewer 9 (Caso possua uma versão diferente instalada, desinstalar);\n- ;\n- ;\n- ;\n- ;\n\nObs.: Estes softwares DEVEM ser obtidos pelo FTP NOKIA.";
 			
             if(loc == "Selecione o endereço do solicitante"){
                 if (detail == false) {

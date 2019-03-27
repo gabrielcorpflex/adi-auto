@@ -11,56 +11,62 @@
 </head>
 
 <body>
+    
+    <header>
+        <img id="pLogo" src="menu-shape-sm.png"/>
+		<img id="logo" src="logo-corpflex.png"/>
+        <h1>Print Service</h1>
+    </header>
 
-	<h1>Print Service</h1>
+    <div class="mainCont">
+        <div id="cont">
+            <div id="fill">
 
-	<div id="cont">
-		<div id="fill">
+                <form>
+                    Serial Number:<br>
+                    <input type="text" id="serial" placeholder="Número de série do equipamento"><br><br>
+                    Address: <br>
+                    <input type="text" id="address" placeholder="Endereço do solicitante"><br><br>
+                </form>
 
-			<form>
-				Serial Number:<br>
-				<input type="text" id="serial" placeholder="Número de série do equipamento"><br><br>
-				Address: <br>
-				<input type="text" id="address" placeholder="Endereço do solicitante"><br><br>
-			</form>
+                <form>
+                    Description: <br>
+                    <textarea type="text" id="desc" placeholder="Descreva o trâmite"></textarea><br><br>
+                </form>
 
-			<form>
-	            Description: <br>
-				<textarea type="text" id="desc" placeholder="Descreva o trâmite"></textarea><br><br>
-			</form>
+                <form><!--Seleciona o tipo de trâmite-->
+                    <label><input name="ticket_type" type="radio" id="open">Abertura</label>
+                    <label><input name="ticket_type" type="radio" id="pendency">Pendência</label>
+                    <label><input name="ticket_type" type="radio" id="update">Atualização</label>
+                    <label><input name="ticket_type" type="radio" id="close">Fechamento</label>
+                </form>
 
-	        <form><!--Seleciona o tipo de trâmite-->
-				<label><input name="ticket_type" type="radio" id="open">Abertura</label>
-				<label><input name="ticket_type" type="radio" id="pendency">Pendência</label>
-				<label><input name="ticket_type" type="radio" id="update">Atualização</label>
-				<label><input name="ticket_type" type="radio" id="close">Fechamento</label>
-			</form>
+            </div>
 
-		</div>
+            <br/>
 
-		<br/>
+            <div>
 
-		<div>
-			
-			<button onclick="auto_fill()">Gerar Log</button><br><br>
-	        <textarea rows="15" id="log" placeholder="A log com ADI e dados fornecidos será gerada neste campo"></textarea><br/>
-	        <button id="cop_tex" onclick="cop()">Copiar</button>
+                <button onclick="auto_fill()">Gerar Log</button><br><br>
+                <textarea rows="15" id="log" placeholder="A log com ADI e dados fornecidos será gerada neste campo"></textarea><br/>
+                <button id="cop_tex" onclick="cop()">Copiar</button>
 
-		</div>
+            </div>
 
-	</div>
+        </div>
 
-	<nav>
+        <nav>
 
-	<h2>Outros Formulários</h2>
+        <h2>Outros Formulários</h2>
 
-		<ul>
-			<li><a href="ADI_auto.html">Trâmites Padrão</a></li>
-			<li><a href="visita.html">Solicitação de Visita técnica</a></li>
-			<li><a href="print.html">Print Service</a></li>
-		</ul>
+            <ul>
+                <li><a href="ADI_auto.html">Trâmites Padrão</a></li>
+                <li><a href="visita.html">Solicitação de Visita técnica</a></li>
+                <li><a href="print.html">Print Service</a></li>
+            </ul>
 
-	</nav>
+        </nav>
+    </div>
 
 	<script type="text/javascript">
 

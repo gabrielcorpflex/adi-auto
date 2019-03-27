@@ -12,6 +12,7 @@ body{
 	left: 0;
     margin: 0;
     padding: 0;
+    width: 100%;
 }
 
 #logo{
@@ -51,30 +52,37 @@ h1{
 	width: 75%;
 	display: block;
 	margin-top: 20px;
-	margin-left: 15%;
-	margin-right: 10%;
+	margin-left: 30%;
+	margin-right: 70%;
 	/*border: thin solid;*/
 }
 
-#cont {
-	width: 58%;
+#cont{
+	width: 586.813px;
 	border: 5px solid #FFAF38;
-	-webkit-border-radius: 30px;
-    -moz-border-radius: 30px;
-		border-radius: 30px;
-	padding: 15px;
+	-webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+		border-radius: 20px;
+	padding: 17px 17px 6px 17px;
 	background: rgb(16, 51, 89);
     /*background-image: linear-gradient(to bottom right , #2E5B82, #103359);*/
+}
+
+.col-field-fill, .col-field-gen{
+	width: 100%;
+	display: block;
+	border-collapse: separate;
+	overflow: hidden;
+    padding-right: 4px;
 
 }
 
-.fTable{
-	width: 100%;
-	display: block;
-	float: right;
-	border-collapse: separate;
-	overflow: hidden;
+.row-field{
+    margin-bottom: 10px;
+}
 
+strong{
+    line-height: 25px;
 }
 
 input[type="text"], #desc, fieldset{
@@ -92,12 +100,19 @@ input[type="text"], #desc, fieldset{
 	margin: 0;
 }
 
+#gen-field{
+    margin-top: 10px;
+}
+
 #log, #descrip{
-    width: 100%;
     border: 2px solid #EB9E1A;
 	border-radius: 5px;
 	padding: 0;
 	margin: 0;
+}
+
+#log, #descrip, .row-field, fieldset{
+    width: 100%
 }
 
 strong, label{
@@ -184,25 +199,6 @@ input[type="radio"]{
     
 }
 
-/*.chk_mark:after{
-    content: "";
-    position: absolute;
-    display: none;
-}
-
-.opt input:checked ~ .chk_mark:after{
-    display: block;
-}
-
-.opt .chk_mark:after{
-    top: 3.7px;
-    left: 3.5px;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: #fff;
-}*/
-
 input, textarea, h1, button, form, nav, fieldset, table,h3{
 	font-family: Arial,sans-serif;
 }
@@ -279,7 +275,7 @@ textarea{
 	resize: vertical;
 }
 
-.btn{
+#cop-btn, #gen-btn{
 	display: block;
 	float: right;
 	border: 2px solid #EB9E1A;
@@ -291,12 +287,12 @@ textarea{
 	height: 30px;
 	width: 100px;
 	margin: 0;
+    margin-bottom: 10px;
     cursor: pointer;
+    margin-right: -2.5px;
 }
 
 #lim_tex{
-    display: block;
-	float: right;
 	border: 2px solid #EB9E1A;
 	border-radius: 5px;
 	background: #EB9E1A;
@@ -309,7 +305,7 @@ textarea{
     cursor: pointer;
 }
 
-.btn:hover{
+.btn:hover, #gen-btn:hover, #cop-btn:hover{
 	background: #EB9E1A;
     background-image: linear-gradient(to bottom right , #C27628, #EB9E1A);
 	color: #FFF;
@@ -326,10 +322,6 @@ textarea{
     top: 1px;
 }
 
-#cop_tex{
-    margin-left: 10px;
-}
-
 #mand, #mand2{
 	color: red;
 	padding: 0;
@@ -337,10 +329,10 @@ textarea{
 }
 
 #address{
-	margin: 5px 0 5px 0;
+	margin: 5px 6px 5px 6px;
 	border-radius: 5px;
 	border-color: black;
-	width: 100%;
+	width: 98%;
 }
 
 .circle{
@@ -350,14 +342,9 @@ textarea{
 	border-radius: 10px
 }
 
-td{
-	/*border: thin solid salmon;*/
-}
-
-table {
-	width: 100%;
-    margin-right: 5px;
-	table-layout: fixed;
+.radio-types{
+    width: 70%;
+    padding: 0 15% 0 15%; 
 }
 
 .rBtn{
@@ -378,14 +365,57 @@ table {
 	left: 0;
 }
 
-
-
 .chk_choose_camp{
     justify-content: center;
 }
 
  label input[type="checkbox"]:checked + label{
     text-shadow: 1px 0 0 currentColor;
+}
+
+@media only screen and (max-width: 1223px){
+    .mainCont{
+        margin-left: 19%;
+    }
+    #cont{
+        width: 57%;
+    }
+    .radio-types{
+        padding: 0 5% 0 8%;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1034px){
+    .mainCont{
+        margin-left: 19%;
+    }
+    #cont{
+        width: 57%;
+    }
+    .radio-types{
+        padding: 0 1%;
+        width: 100%;
+    }
+    #address{
+        width: 96%;
+    }
+}
+
+@media only screen and (max-width: 681px){
+    .mainCont{
+        margin-left: 19%;
+    }
+    #cont{
+        width: 57%;
+    }
+    .radio-types{
+        padding: 0 1%;
+        width: 97%;
+    }
+    #lMenu{
+        width: 25%;
+    }
 }
 
 /*.change_color_button{
@@ -398,3 +428,27 @@ table {
     border-radius: 10px;
 }*/
 
+
+/*.chk_mark:after{
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.opt input:checked ~ .chk_mark:after{
+    display: block;
+}
+
+.opt .chk_mark:after{
+    top: 3.7px;
+    left: 3.5px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #fff;
+}*/
+
+
+/*td{
+	border: thin solid salmon;
+}*/

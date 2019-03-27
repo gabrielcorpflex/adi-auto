@@ -20,57 +20,51 @@
     
 	<div class="mainCont">
 		<div id="cont">	
-			<form class="fTable">
-				<table>
-					<colgroup>
-						<col class="fWSize"/>
-					</colgroup>
-					<tr>
-						<td>
-				            <strong>Description<i id="mand"></i></strong><br/>
-							<textarea type="text" id="descrip" placeholder="Descreva o trâmite" autofocus></textarea>
-						</td>	
-					</tr>	
-						
-					<tr>
-						<td>
-							<!--Seleciona o tipo de trâmite-->
-							<fieldset id="options">
-								<legend><strong>Tipo de Chamado<i id="mand2"></i></strong></legend><br/>
-								<div class="rBtn"><label class="opt"><input name="ticket_type" type="radio" id="open">Abertura<span class="chk_mark"></span></label></div>
-								<div class="rBtn"><label class="opt"><input name="ticket_type" type="radio" id="pendency">Pendência<span class="chk_mark"></span></label></div>
-								<div class="rBtn"><label class="opt"><input name="ticket_type" type="radio" id="update">Atualização<span class="chk_mark"></span></label></div>
-								<div class="rBtn"><label class="opt"><input name="ticket_type" type="radio" id="close">Fechamento<span class="chk_mark"></span></label></div>
-							</fieldset>
-						</td>	
-					</tr>
-				</table>
+			<form class="col-field-fill">
+                
+                <div class="row-field">
+                
+                    <strong>Description<i id="mand"></i></strong><br/>
+                    <textarea type="text" id="descrip" placeholder="Descreva o trâmite" autofocus></textarea>
+            
+                </div>
+                
+                <div class="row-field">
+                    
+                    <!--Seleciona o tipo de trâmite-->
+                    <fieldset id="options">
+                        <legend><strong>Tipo de Chamado<i id="mand2"></i></strong></legend><br/>
+                        
+                        <div class="radio-types">
+                            <div class="rBtn"><label class="opt"><input name="ticket_type" type="radio" id="open">Abertura<span class="chk_mark"></span></label></div>
+                            <div class="rBtn"><label class="opt"><input name="ticket_type" type="radio" id="pendency">Pendência<span class="chk_mark"></span></label></div>
+                            <div class="rBtn"><label class="opt"><input name="ticket_type" type="radio" id="update">Atualização<span class="chk_mark"></span></label></div>
+                            <div class="rBtn"><label class="opt"><input name="ticket_type" type="radio" id="close">Fechamento<span class="chk_mark"></span></label></div>
+                        </div>
+                    </fieldset>
+                    
+                </div>
+
 			</form>
 
-			<table class="bTable">
-				<colgroup>
-					<col class="fWSize"/>
-				</colgroup>
-				<tr>
-					<td>
-						<button class="btn" onclick="auto_fill()" id="logen">Gerar Log</button><br>
-					</td>
-				</tr>
-
-				<tr>
-					<td>
-						<textarea rows="15" id="log" placeholder="A log com ADI e dados fornecidos será gerada neste campo"></textarea><br/>
-					</td>
-				</tr>
-				<tr>
-					<td>
-                        <button class="btn" id="cop_tex" onclick="cop()">Copiar</button>
-                        <form>
-                            <button class="btn" id="lim_tex" action="ADI_auto.html">Limpar</button>
-                        </form>
-					</td>
-				</tr>
-			</table>
+			<div class="col-field-gen" id="gen-field">
+				
+				<div class="row-field">
+                    <button class="btn" onclick="auto_fill()" id="gen-btn">Gerar Log</button><br>
+                </div>
+                
+                <div class="row-field">
+                    <textarea rows="15" id="log" placeholder="A log com ADI e dados fornecidos será gerada neste campo"></textarea><br/>
+                </div>
+                
+                <div class="row-field">
+                    <button class="btn" id="cop-btn" onclick="cop()">Copiar</button>
+                    <form>
+                        <button class="btn" id="lim_tex" action="ADI_auto.html">Limpar</button>
+                    </form>
+                </div>
+				
+			</div>
 		</div>
 
 		<div id="lMenu">
